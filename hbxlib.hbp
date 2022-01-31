@@ -1,0 +1,28 @@
+# hb-Xlib
+
+-hblib
+-inc
+
+-olib/${hb_plat}/${hb_comp}/${hb_name}
+
+-w3 -es2 -gc3
+
+-depkeyhead=xlib:X11/Xlib.h
+-depcontrol=xlib:${HB_WITH_XLIB}
+-depincpath=xlib:/usr/include
+-depincpath=xlib:/usr/local/include
+-depincpath=xlib:/opt/local/include
+-depincpath=xlib:/usr/local/opt/include
+-depimplibs=xlib:../bin/X11.dll
+-depimplibs=xlib:../lib/libX11.a
+-depimplibd=xlib:xlib
+-depfinish=xlib
+
+-iinclude
+
+-hbx=include/${hb_name}.hbx
+
+src/*.c
+
+$hb_pkg_dynlib.hbm
+$hb_pkg_install.hbm
